@@ -17,6 +17,11 @@ const [password, setPassword] = useState('')
 
 const navigation = useNavigation()
 
+/*
+El código comienza declarando una función de devolución de llamada para manejar los cambios en la autenticación del usuario. 
+Cuando un usuario inicia sesión, se ejecuta la función y si existe el usuario, se utiliza la función navigation.replace 
+para redirigir al usuario a la página "Home" 
+*/
 useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
